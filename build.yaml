@@ -22,9 +22,7 @@ shield: ["sofle-plus_left", "sofle-plus_right"]
 include:
   - board: nice_nano_v2
     shield: sofle-plus_left
-    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: sofle-plus_right
-    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset
