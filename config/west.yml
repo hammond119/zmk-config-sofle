@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: yangxing
+      url-base: https://github.com/yangxing844
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -10,7 +12,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-lpm009m360a-driver
-      remote: yangxing844
+      remote: yangxing
       revision: master
   self:
     path: config
