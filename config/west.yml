@@ -10,7 +10,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-lpm009m360a-driver
-      remote: yangxing
+      remote: yangxing844
       revision: master
   self:
     path: config
