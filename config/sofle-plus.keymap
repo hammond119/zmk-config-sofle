@@ -11,18 +11,18 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
-#define LOWER 1
-#define RAISE 2
+#define SYMBOL 1
+#define CNTRL 2
 #define ADJUST 3
 
 / {
-    // Activate ADJUST layer by pressing raise and lower
+    // Activate ADJUST layer by pressing control and symbol
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <LOWER RAISE>;
+            if-layers = <SYMBOL CNTRL>;
             then-layer = <ADJUST>;
         };
     };
@@ -33,19 +33,19 @@
         default_layer {
             display-name = "default";
 
-            // ------------------------------------------------------------------------------------------------------------
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+       // ------------------------------------------------------------------------------------------------------------
+       // | EP_TOG |   `  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BACKS | F10 |
+       // | BT_CLR | ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | CAPS  | F11 |
+       // | BT_NXT | TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   | F5  |
+       // | BT_PRV |SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  | PRTSC |  N   |  M    |  ,    |  .   |   /   | SHIFT | F7  |
+       //                 | GUI | ALT | CTRL | SYM  |  ENTER |              | SPACE | CNTRL| CTRL  | ALT   | GUI  |
 
             bindings = <
 &ext_power EP_TOG  &kp ESC           &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                  &kp N6     &kp N7     &kp N8     &kp N9      &kp N0    &kp BACKSPACE  &kp F10
 &bt BT_CLR         &kp GRAVE         &kp Q   &kp W     &kp E     &kp R      &kp T                                   &kp Y      &kp U      &kp I      &kp O       &kp P     &kp CAPSLOCK   &kp F11
 &bt BT_NXT         &kp LSHIFT        &kp A   &kp S     &kp D     &kp F      &kp G                                   &kp H      &kp J      &kp K      &kp L       &kp SEMI  &kp SQT        &kp F5
 &bt BT_PRV         &kp LEFT_CONTROL  &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE  &kp PRINTSCREEN  &kp N      &kp M      &kp COMMA  &kp DOT     &kp FSLH  &kp RSHFT      &kp F7
-                                             &kp LGUI  &kp LALT  &kp SPACE  &mo LOWER  &kp RET     &kp TAB          &mo RAISE  &kp RCTRL  &kp RALT   &kp ESCAPE
+                                             &kp LGUI  &kp LALT  &kp SPACE  &mo SYMBOL  &kp RET     &kp TAB          &mo CNTRL  &kp RCTRL  &kp RALT   &kp ESCAPE
             >;
 
             sensor-bindings =
@@ -53,8 +53,8 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
-        lower_layer {
-            display-name = "lower";
+        symbol_layer {
+            display-name = "symbol";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
@@ -75,8 +75,8 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        raise_layer {
-            display-name = "raise";
+        control_layer {
+            display-name = "control";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
