@@ -41,11 +41,11 @@
             //                 | GUI | ALT | CTRL | SYM  |  ENTER |              | SPACE | CNTRL| CTRL  | ALT   | GUI  |
 
             bindings = <
-&ext_power EP_TOG  &kp ESC           &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                   &kp N6     &kp N7      &kp N8     &kp N9         &kp N0    &kp BACKSPACE  &kp F10
-&bt BT_CLR         &kp GRAVE         &kp Q   &kp W     &kp E     &kp R      &kp T                                    &kp Y      &kp U       &kp I      &kp O          &kp P     &kp CAPSLOCK   &kp F11
-&bt BT_NXT         &kp LSHIFT        &kp A   &kp S     &kp D     &kp F      &kp G                                    &kp H      &kp J       &kp K      &kp L          &kp SEMI  &kp SQT        &kp F5
-&bt BT_PRV         &kp LEFT_CONTROL  &kp Z   &kp X     &kp C     &kp V      &kp B       &kp C_MUTE  &kp PRINTSCREEN  &kp N      &kp M       &kp COMMA  &kp DOT        &kp FSLH  &kp BSLH       &kp F7
-                                             &kp LGUI  &kp LALT  &kp SPACE  &mo SYMBOL  &kp RET     &kp TAB          &mo CNTRL  &kp RSHIFT  &kp RCTRL  &kp RIGHT_ALT
+&soft_off     &kp ESC           &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                   &kp N6     &kp N7      &kp N8     &kp N9         &kp N0    &kp BACKSPACE  &kp F10
+&out OUT_TOG  &kp GRAVE         &kp Q   &kp W     &kp E     &kp R      &kp T                                    &kp Y      &kp U       &kp I      &kp O          &kp P     &kp CAPSLOCK   &kp F11
+&bt BT_NXT    &sk LSHFT         &kp A   &kp S     &kp D     &kp F      &kp G                                    &kp H      &kp J       &kp K      &kp L          &kp SEMI  &kp SQT        &kp F5
+&bt BT_PRV    &sk LEFT_CONTROL  &kp Z   &kp X     &kp C     &kp V      &kp B       &kp C_MUTE  &kp PRINTSCREEN  &kp N      &kp M       &kp COMMA  &kp DOT        &kp FSLH  &kp BSLH       &kp F7
+                                        &sk LGUI  &sk LALT  &kp SPACE  &mo SYMBOL  &kp RET     &kp TAB          &mo CNTRL  &sk RSHIFT  &sk RCTRL  &sk RIGHT_ALT
             >;
 
             sensor-bindings =
@@ -106,11 +106,11 @@
 
             display-name = "adjust";
             bindings = <
-&trans  &trans  &trans  &trans   &trans   &trans   &trans                        &none         &none          &none       &none             &none       &none  &trans
-&trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0                  &bt BT_SEL 2  &out OUT_TOG   &trans      &kp C_MUTE        &trans      &none  &trans
-&trans  &none   &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1                  &bt BT_SEL 3  &kp C_BRI_UP   &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &none  &trans
-&trans  &none   &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR    &trans  &trans  &bt BT_SEL 4  &kp C_BRI_DEC  &trans      &trans            &trans      &none  &trans
-                        &trans   &trans   &trans   &trans        &trans  &trans  &trans        &trans         &trans      &trans
+&ext_power EP_TOG  &trans  &trans  &trans   &trans   &trans   &trans                        &none         &none          &none       &none             &none       &none  &trans
+&trans             &trans  &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0                  &bt BT_SEL 2  &out OUT_TOG   &trans      &kp C_MUTE        &trans      &none  &trans
+&trans             &none   &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1                  &bt BT_SEL 3  &kp C_BRI_UP   &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &none  &trans
+&trans             &none   &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR    &trans  &trans  &bt BT_SEL 4  &kp C_BRI_DEC  &trans      &trans            &trans      &none  &trans
+                                   &trans   &trans   &trans   &trans        &trans  &trans  &trans        &trans         &trans      &trans
             >;
         };
     };
