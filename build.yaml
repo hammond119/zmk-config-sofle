@@ -17,12 +17,12 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-board: ["nice_nano_v2"]
+board: ["nice_nano"]
 shield: ["sofle-plus_left lpm_view_adapter lpm_view", "sofle-plus_right lpm_view_adapter lpm_view"]
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: sofle-plus_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: sofle-plus_right
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
